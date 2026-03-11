@@ -1,5 +1,0 @@
-{
-  "name": "Xtreme Diagnostics - Panel de Ventas",
-  "description": "DashApp para Chatwoot que genera cotizaciones y dossiers en PDF, los sube a MinIO y los envía al chat.",
-  "requestFramePermissions": []
-}
