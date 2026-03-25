@@ -74,13 +74,8 @@ echo [6/6] Limpiando y preparando tu web final...
 :: Volver a la carpeta original donde esta el .bat
 cd /d "%~dp0"
 
-:: Crear carpeta final limpia
-set "FINAL_DIR=%~dp0WEB_LISTA"
-if exist "%FINAL_DIR%" rd /s /q "%FINAL_DIR%"
-mkdir "%FINAL_DIR%"
-
-:: Mover los archivos compilados a la carpeta final
-xcopy "%PROJ_DIR%dist\*" "%FINAL_DIR%\" /E /H /C /I /Y >nul
+:: Mover los archivos compilados a la carpeta raiz (al lado del .bat)
+xcopy "%PROJ_DIR%dist\*" "%~dp0" /E /H /C /I /Y >nul
 
 :: Borrar la carpeta temporal con todo el codigo fuente pesado y node_modules
 rd /s /q "%TEMP_DIR%"
@@ -89,8 +84,8 @@ color 0A
 echo.
 echo ===================================================
 echo   EXITO TOTAL! 
-echo   Tu web compilada esta en la carpeta: WEB_LISTA
-echo   Ahi dentro encontraras tu index.html y assets.
+echo   Tu web compilada esta lista al lado de este archivo.
+echo   Ahi encontraras tu index.html y la carpeta assets.
 echo   (El codigo fuente pesado fue eliminado automaticamente)
 echo ===================================================
 pause
