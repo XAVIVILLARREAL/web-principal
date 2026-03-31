@@ -15,6 +15,16 @@ export default {
         'xtreme-dark': '#0B1120',
         'xtreme-navy': '#1e293b',
         'xtreme-orange': '#ff6b00',
+        
+        // Plantillas App Colors
+        'tech-cyan': '#81c7c7',
+        'tech-cyan-dark': '#63a8a8',
+        'tech-ink': '#334155',
+        'tech-muted': '#94a3b8',
+        'tech-line': '#e2e8f0',
+        'tech-border': '#e2e8f0',
+        'tech-accent': '#475569',
+        'tech-green': '#61a878',
       },
       fontFamily: {
         sans: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'],
@@ -32,6 +42,9 @@ export default {
         'float': 'float 6s ease-in-out infinite',
         'spin-slow': 'spin 10s linear infinite',
         'shine': 'shine 1.5s ease-out infinite',
+        'fade-in': 'fadeIn 0.3s ease-out forwards',
+        'fade-in-up': 'fadeInUp 0.4s ease-out forwards',
+        'pop': 'pop 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards',
       },
       keyframes: {
         float: {
@@ -41,6 +54,18 @@ export default {
         shine: {
           '0%': { left: '-100%' },
           '100%': { left: '100%' },
+        },
+        fadeIn: {
+          '0%': { opacity: '0' },
+          '100%': { opacity: '1' },
+        },
+        fadeInUp: {
+          '0%': { opacity: '0', transform: 'translateY(10px)' },
+          '100%': { opacity: '1', transform: 'translateY(0)' },
+        },
+        pop: {
+          '0%': { opacity: '0', transform: 'scale(0.95) translateY(10px)' },
+          '100%': { opacity: '1', transform: 'scale(1) translateY(0)' },
         }
       }
     },
